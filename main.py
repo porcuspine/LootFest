@@ -50,7 +50,7 @@ class LootfestGame:
         for item, quantity in sorted_inventory:
             print(f"{quantity}x {item.name} ({item.rarity.name.lower()})")
         print("NotImplementedException")
-        input("Submit anything to continue...")
+        input("Submit anything to continue...\n")
 
     def slay_monster(self, monster:monsters.Monster):
         print(f"You slayed {monster.name}!")
@@ -80,7 +80,7 @@ class LootfestGame:
         for item, quantity in loot:
             self.inventory[item] = self.inventory.get(item, 0) + quantity
         
-        input("Submit anything to continue...\n>>> ")
+        input("Submit anything to continue...\n")
 
 if __name__ == "__main__":
     LootfestGame().mainloop()
